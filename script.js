@@ -1,14 +1,17 @@
 function calculate() {
-    const total = Number(document.getElementById("total").value)
-    const rate = Number(document.getElementById("rate").value)
+    const string1 = document.getElementById("string1").value
+    const s1=string1.length;
+    const string2 = document.getElementById("string2").value
+    const s2=string2.length;
+    const string3 = document.getElementById("string3").value
+    const s3=string3.length;
+    const result=Math.min(s1,s2,s3);
+    if(result==s1)
+    {
+        document.querySelector("#result").innerHTML=""
+    }
 
-    const tip = total * (rate / 100)
-    const tax = total * (5.5/100) 
-    const grand_total = total + tip + tax
-
-    document.getElementById("tip").innerHTML = tip
-    document.getElementById("tax").innerHTML = tax
-    document.getElementById("grand-total").innerHTML = grand_total
+    
 }
 
 document.querySelector('#calculate').addEventListener('click', calculate)
